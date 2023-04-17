@@ -1,8 +1,12 @@
-module "storage" {
-  source = "./modules/storage"
+#module "storage" {
+#  source = "./modules/storage"
+#  airflow_rg_name="${var.airflow_rg_name}"
+#  airflow_sablob_name="${var.airflow_sablob_name}"
+#}
+module "compute-engine-simple" {
+  source = "./modules/compute-engine-simple"
   airflow_rg_name="${var.airflow_rg_name}"
-  airflow_sablob_name="${var.airflow_sablob_name}"
-}
+}  
 #module "compute-engine" {
 #  source = "./modules/compute-engine"
 #}  
